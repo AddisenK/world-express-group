@@ -204,7 +204,7 @@ nav a.active {
   font-size: 26px;
 }
 
-/* Homepage hero: right-hand logo has no panel, border, background, or shadow. */
+/* Homepage hero: the logo is directly in the right-side empty space. */
 .hero {
   padding: 64px 0 72px;
   background: #fff;
@@ -234,16 +234,12 @@ nav a.active {
   font-size: 17px;
 }
 
-/* This puts logo.png exactly in the large empty area at the right of the heading. */
 .hero-logo-space {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 330px;
-  padding: 0;
   background: transparent;
-  border: 0;
-  box-shadow: none;
 }
 
 .hero-logo-space img {
@@ -572,14 +568,14 @@ section:not(.hero) {
   color: #c3cddc;
 }
 
-.divisions,
+.operations-grid,
 .fleet-grid,
 .news-grid {
   display: grid;
   gap: 24px;
 }
 
-.divisions {
+.operations-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
@@ -588,7 +584,7 @@ section:not(.hero) {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.division-card,
+.operation-card,
 .fleet-card,
 .news-card {
   background: #fff;
@@ -596,11 +592,11 @@ section:not(.hero) {
   border-radius: 10px;
 }
 
-.division-card {
+.operation-card {
   padding: 38px;
 }
 
-.division-tag {
+.operation-tag {
   display: inline-flex;
   padding: 6px 12px;
   border-radius: 999px;
@@ -620,29 +616,29 @@ section:not(.hero) {
   background: rgba(232, 99, 28, 0.11);
 }
 
-.division-card h3 {
+.operation-card h3 {
   margin: 18px 0 10px;
   font-size: 24px;
 }
 
-.division-card p {
+.operation-card p {
   color: var(--grey);
 }
 
-.division-list {
+.operation-list {
   display: grid;
   gap: 8px;
   margin: 20px 0;
   list-style: none;
 }
 
-.division-list li {
+.operation-list li {
   position: relative;
   padding-left: 18px;
   font-size: 14px;
 }
 
-.division-list li::before {
+.operation-list li::before {
   position: absolute;
   left: 0;
   color: var(--orange);
@@ -956,7 +952,7 @@ footer {
   }
 
   .plan-fields-polished,
-  .divisions,
+  .operations-grid,
   .fleet-grid,
   .news-grid,
   .network,
@@ -997,7 +993,7 @@ footer {
     padding: 62px 0;
   }
 
-  .division-card {
+  .operation-card {
     padding: 28px;
   }
 }

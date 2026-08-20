@@ -22,12 +22,11 @@
     <nav>
       <ul>
         <li><a href="index.html" class="active">Home</a></li>
-<li><a href="network.html">Network</a></li>
-<li><a href="divisions.html">Divisions</a></li>
-<li><a href="fleet.html">Fleet</a></li>
-<li><a href="alliance.html">Alliance</a></li>
-<li><a href="newsroom.html">Newsroom</a></li>
-
+        <li><a href="network.html">Network</a></li>
+        <li><a href="divisions.html">Divisions</a></li>
+        <li><a href="fleet.html">Fleet</a></li>
+        <li><a href="alliance.html">Alliance</a></li>
+        <li><a href="newsroom.html">Newsroom</a></li>
       </ul>
     </nav>
     <div class="nav-cta">
@@ -37,50 +36,60 @@
   </div>
 </header>
 
-<section class="hero" style="background-image:url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1600&auto=format&fit=crop');">
-  <div class="hero-overlay"></div>
-  <div class="container hero-content">
-    <span class="section-label" style="color:var(--orange-2)">Passenger &middot; Cargo &middot; VATSIM Virtual Airline</span>
-    <h1>Connecting the world,<br><em>on time, every time.</em></h1>
-    <p>World Express Group is a VATSIM virtual airline fusing oneworld-style global passenger travel with FedEx-style express cargo logistics, flown by real pilots on the world's premier air traffic simulation network.</p>
-    <div class="hero-buttons">
-      <a href="https://newsky.app/airline/wxg/info" target="_blank" class="btn btn-primary">Apply Now</a>
-      <a href="fleet.html" class="btn btn-outline">Explore Our Fleet</a>
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <span class="section-label">Passenger &middot; Cargo &middot; VATSIM Virtual Airline</span>
+      <h1>Plan your flight</h1>
+      <p>World Express Group is a VATSIM virtual airline fusing oneworld-style global passenger travel with FedEx-style express cargo logistics, flown by real pilots on the world's premier air traffic simulation network.</p>
     </div>
-    <div class="hero-stats">
-      <div><strong>140+</strong><span>Destinations</span></div>
-      <div><strong>11</strong><span>Aircraft Types</span></div>
-      <div><strong>500 hrs</strong><span>Min. VATSIM Experience</span></div>
+
+    <div class="plan-bar">
+      <div class="plan-tabs">
+        <span class="active">Join the Airline</span>
+        <span>Track a Route</span>
+        <span>Community</span>
+      </div>
+      <div class="plan-fields">
+        <div class="plan-field">
+          <label>Base Airport</label>
+          <div class="value-row">&#9992; YSSY, Sydney (Kingsford Smith), Australia</div>
+        </div>
+        <div class="plan-field">
+          <label>VATSIM Hours Required</label>
+          <div class="value-row">&#128337; 500+ Hours</div>
+        </div>
+        <div class="plan-field">
+          <label>Platform</label>
+          <div class="value-row">&#127760; NewSky Virtual Airline</div>
+        </div>
+        <div class="plan-field">
+          <a href="https://newsky.app/airline/wxg/info" target="_blank" class="btn btn-primary">Apply Now &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="quicklinks">
+      <a href="network.html" class="quicklink"><span class="icon-circle">&#9992;</span>VATSIM Info</a>
+      <a href="fleet.html" class="quicklink"><span class="icon-circle">&#128747;</span>Our Fleet</a>
+      <a href="divisions.html" class="quicklink"><span class="icon-circle">&#128230;</span>Divisions</a>
+      <a href="alliance.html" class="quicklink"><span class="icon-circle">&#127760;</span>Alliance</a>
+      <a href="newsroom.html" class="quicklink"><span class="icon-circle">&#128240;</span>Newsroom</a>
+      <a href="https://discord.gg/Qm5MyxyA" target="_blank" class="quicklink"><span class="icon-circle">&#128172;</span>Discord</a>
+    </div>
+
+    <div class="promo-row">
+      <div class="promo-card">
+        <span class="promo-pill">Now Recruiting</span>
+        <h3>Join World Express Group</h3>
+        <div>
+          <a href="https://newsky.app/airline/wxg/info" target="_blank" class="btn" style="background:#fff;color:var(--orange);border-radius:24px;">Apply on NewSky</a>
+        </div>
+      </div>
+      <div class="promo-photo" style="background-image:url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1200&auto=format&fit=crop');"></div>
     </div>
   </div>
 </section>
-
-<div class="container">
-  <div class="plan-bar">
-    <div class="plan-tabs">
-      <span class="active">Join the Airline</span>
-      <span>Track a Route</span>
-      <span>Community</span>
-    </div>
-    <div class="plan-fields">
-      <div class="plan-field">
-        <label>Base Airport</label>
-        <input type="text" value="YSSY &middot; Sydney" readonly>
-      </div>
-      <div class="plan-field">
-        <label>VATSIM Hours Required</label>
-        <input type="text" value="500+ Hours" readonly>
-      </div>
-      <div class="plan-field">
-        <label>Platform</label>
-        <input type="text" value="NewSky Virtual Airline" readonly>
-      </div>
-      <div class="plan-field">
-        <a href="https://newsky.app/airline/wxg/info" target="_blank" class="btn btn-primary">Apply Now &rarr;</a>
-      </div>
-    </div>
-  </div>
-</div>
 
 <div class="alliance-strip" style="margin-top:70px;">
   <div class="container">
@@ -170,7 +179,7 @@
   <div class="container network">
     <div>
       <span class="section-label">VATSIM Network</span>
-      <h2 style="font-size:34px;margin-bottom:14px;">Fly on the world's premier ATC simulation network.</h2>
+      <h2 style="font-size:34px;margin-bottom:14px;color:#fff;">Fly on the world's premier ATC simulation network.</h2>
       <p style="color:#b7c2d3;margin-bottom:32px;max-width:480px;">World Express Group pilots fly exclusively on VATSIM, interacting with real air traffic controllers across the globe. New hires must hold a minimum of 500 hours of VATSIM flight experience.</p>
       <a href="network.html" class="btn btn-primary">Learn About VATSIM</a>
     </div>
@@ -228,13 +237,12 @@
   <div class="container">
     <h2>Ready to fly with World Express Group?</h2>
     <p>Apply now through NewSky and join a growing community of VATSIM pilots flying passenger and cargo routes worldwide.</p>
-    <div class="hero-buttons" style="justify-content:center;">
+    <div class="hero-buttons" style="justify-content:center;display:flex;gap:16px;">
       <a href="https://newsky.app/airline/wxg/info" target="_blank" class="btn btn-primary">Apply Now</a>
-      <a href="https://discord.gg/Qm5MyxyA" target="_blank" class="btn btn-outline">Join Our Discord</a>
+      <a href="https://discord.gg/Qm5MyxyA" target="_blank" class="btn btn-outline" style="border-color:#fff;color:#fff;">Join Our Discord</a>
     </div>
   </div>
 </div>
-
 
 <footer>
   <div class="container">

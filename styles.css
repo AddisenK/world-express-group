@@ -61,8 +61,6 @@ h3 {
   letter-spacing: -0.6px;
 }
 
-/* Buttons */
-
 .btn {
   display: inline-flex;
   align-items: center;
@@ -255,11 +253,54 @@ nav a.active {
   mix-blend-mode: multiply;
 }
 
+/* Centered quick links above the homepage application panel */
+
+.quicklinks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 34px;
+  margin: 18px auto 0;
+  padding: 0;
+}
+
+.quicklink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 94px;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.icon-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  color: var(--orange);
+  background: #fff;
+  border: 1px solid #dfe3e8;
+  border-radius: 50%;
+  font-size: 17px;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.quicklink:hover .icon-circle {
+  background: #fff0e8;
+  border-color: var(--orange);
+}
+
 /* Flight planning */
 
 .plan-bar-polished {
   overflow: hidden;
-  margin-top: 38px;
+  margin-top: 32px;
   background: #fff;
   border: 1px solid #d7dce4;
   border-radius: 12px;
@@ -385,46 +426,6 @@ nav a.active {
   line-height: 1;
 }
 
-/* Quick links */
-
-.quicklinks {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  padding: 30px 8px 0;
-}
-
-.quicklink {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  width: 88px;
-  color: var(--ink);
-  font-size: 12px;
-  font-weight: 600;
-  text-align: center;
-}
-
-.icon-circle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  color: var(--orange);
-  background: #fff;
-  border: 1px solid #dfe3e8;
-  border-radius: 50%;
-  font-size: 17px;
-  transition: border-color 0.2s ease, background 0.2s ease;
-}
-
-.quicklink:hover .icon-circle {
-  background: #fff0e8;
-  border-color: var(--orange);
-}
-
 /* Promotional section */
 
 .promo-row {
@@ -468,6 +469,7 @@ nav a.active {
 }
 
 .promo-button {
+  width: fit-content;
   color: var(--orange);
   background: #fff;
 }
@@ -510,7 +512,7 @@ nav a.active {
   border-radius: 50%;
 }
 
-/* Shared page layouts - restored for Network, Fleet, Alliance and Newsroom */
+/* Shared page layouts */
 
 section:not(.hero) {
   padding: 82px 0;
@@ -585,7 +587,6 @@ section:not(.hero) {
   align-items: center;
 }
 
-/* Removed divisions page classes are intentionally not used. */
 .operations-grid,
 .fleet-grid,
 .news-grid,
@@ -1017,7 +1018,6 @@ footer {
   filter: drop-shadow(0 0 7px rgba(255, 157, 46, 0.8));
 }
 
-/* Scope Leaflet popup styling to the VATSIM card so other pages remain unaffected. */
 .vatsim-radar-card .leaflet-popup-content-wrapper {
   color: #fff;
   background: rgba(12, 16, 22, 0.97);
@@ -1184,6 +1184,15 @@ footer {
     max-height: 230px;
   }
 
+  .quicklinks {
+    gap: 18px 10px;
+    margin-top: 20px;
+  }
+
+  .quicklink {
+    width: 78px;
+  }
+
   .plan-tabs {
     gap: 20px;
     padding: 0 18px;
@@ -1208,15 +1217,6 @@ footer {
   .plan-action,
   .apply-now-button {
     min-height: 54px;
-  }
-
-  .quicklinks {
-    justify-content: center;
-    gap: 18px 10px;
-  }
-
-  .quicklink {
-    width: 78px;
   }
 
   .promo-card {

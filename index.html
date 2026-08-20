@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="World Express Group — a VATSIM virtual airline combining a oneworld-inspired passenger network with express cargo operations.">
   <title>World Express Group | Home</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -20,7 +21,7 @@
     </div>
 
     <div class="nav-wrap">
-      <a href="index.html" class="brand">
+      <a href="index.html" class="brand" aria-label="World Express Group home">
         <img src="logo.png" alt="World Express Group logo">
         <span class="brand-name">WORLD EXPRESS <span>GROUP</span></span>
       </a>
@@ -40,19 +41,27 @@
         <a href="https://newsky.app/airline/wxg/info" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Apply Now</a>
       </div>
 
-      <button class="menu-toggle" aria-label="Open navigation">☰</button>
+      <button class="menu-toggle" type="button" aria-label="Open navigation">☰</button>
     </div>
   </header>
 
   <main>
     <section class="hero">
       <div class="container">
-        <div class="hero-content">
-          <span class="section-label">Passenger · Cargo · VATSIM Virtual Airline</span>
-          <h1>Plan your flight</h1>
-          <p>World Express Group is a VATSIM virtual airline combining a oneworld-inspired global passenger network with FedEx-style express cargo operations.</p>
+        <!-- Heading on the left; large World Express Group logo in the empty space on the right -->
+        <div class="hero-content hero-content-with-logo">
+          <div class="hero-copy">
+            <span class="section-label">Passenger · Cargo · VATSIM Virtual Airline</span>
+            <h1>Plan your flight</h1>
+            <p>World Express Group is a VATSIM virtual airline combining a oneworld-inspired global passenger network with FedEx-style express cargo operations.</p>
+          </div>
+
+          <div class="hero-logo-panel">
+            <img src="logo.png" alt="World Express Group logo">
+          </div>
         </div>
 
+        <!-- Qantas-inspired application / planning panel -->
         <section class="plan-bar plan-bar-polished" aria-label="World Express Group application details">
           <div class="plan-tabs">
             <span class="active">Join the Airline</span>
@@ -107,24 +116,50 @@
           </div>
         </section>
 
-        <div class="quicklinks">
-          <a href="network.html" class="quicklink"><span class="icon-circle">✈</span>VATSIM Info</a>
-          <a href="fleet.html" class="quicklink"><span class="icon-circle">✈</span>Our Fleet</a>
-          <a href="divisions.html" class="quicklink"><span class="icon-circle">▣</span>Divisions</a>
-          <a href="alliance.html" class="quicklink"><span class="icon-circle">◎</span>Alliance</a>
-          <a href="newsroom.html" class="quicklink"><span class="icon-circle">▤</span>Newsroom</a>
-          <a href="https://discord.gg/Qm5MyxyA" target="_blank" rel="noopener noreferrer" class="quicklink"><span class="icon-circle">●</span>Discord</a>
+        <!-- Fast access links under the planning panel -->
+        <div class="quicklinks" aria-label="Quick links">
+          <a href="network.html" class="quicklink">
+            <span class="icon-circle">✈</span>
+            <span>VATSIM Info</span>
+          </a>
+          <a href="fleet.html" class="quicklink">
+            <span class="icon-circle">▰</span>
+            <span>Our Fleet</span>
+          </a>
+          <a href="divisions.html" class="quicklink">
+            <span class="icon-circle">▣</span>
+            <span>Divisions</span>
+          </a>
+          <a href="alliance.html" class="quicklink">
+            <span class="icon-circle">◎</span>
+            <span>Alliance</span>
+          </a>
+          <a href="newsroom.html" class="quicklink">
+            <span class="icon-circle">▤</span>
+            <span>Newsroom</span>
+          </a>
+          <a href="https://discord.gg/Qm5MyxyA" target="_blank" rel="noopener noreferrer" class="quicklink">
+            <span class="icon-circle">●</span>
+            <span>Discord</span>
+          </a>
         </div>
 
+        <!-- Qantas-style large promotion tile and aviation photo -->
         <div class="promo-row">
           <div class="promo-card">
             <span class="promo-pill">Now Recruiting</span>
-            <h3>Join World Express Group</h3>
+            <h2>Join World Express Group</h2>
+            <p>Bring your VATSIM experience to a global passenger and cargo operation.</p>
             <div>
               <a href="https://newsky.app/airline/wxg/info" target="_blank" rel="noopener noreferrer" class="btn promo-button">Apply on NewSky</a>
             </div>
           </div>
-          <div class="promo-photo" style="background-image:url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1200&auto=format&fit=crop');"></div>
+          <div
+            class="promo-photo"
+            role="img"
+            aria-label="Airliner flying above the clouds"
+            style="background-image:url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1200&auto=format&fit=crop');"
+          ></div>
         </div>
       </div>
     </section>
@@ -143,7 +178,7 @@
         <div class="section-head">
           <span class="section-label">Two Networks, One Airline</span>
           <h2>Passenger travel and express cargo, under one tail.</h2>
-          <p>World Express Group operates as a dual-purpose virtual carrier: a full-service passenger airline built around the oneworld concept and a dedicated express freighter division inspired by global overnight logistics.</p>
+          <p>World Express Group is a dual-purpose virtual carrier: a full-service passenger airline built around the oneworld concept and a dedicated express freight division inspired by global overnight logistics.</p>
         </div>
 
         <div class="divisions">
@@ -153,7 +188,7 @@
             <p>Full-service scheduled passenger operations connecting Frankfurt to a global network.</p>
             <ul class="division-list">
               <li>Widebody long-haul and regional narrowbody fleet</li>
-              <li>oneworld-inspired codeshare route network</li>
+              <li>oneworld-inspired route network</li>
               <li>Hub-and-spoke passenger operations</li>
               <li>VATSIM group flights and live ATC operations</li>
             </ul>
@@ -163,7 +198,7 @@
           <article class="division-card">
             <span class="division-tag tag-cargo">Express Cargo Division</span>
             <h3>World Express Freight</h3>
-            <p>Dedicated virtual freighter operations for time-critical and overnight cargo flights.</p>
+            <p>Dedicated freighter operations for time-critical and overnight cargo flights.</p>
             <ul class="division-list">
               <li>Dedicated 777F, MD-11F and A300F operations</li>
               <li>Overnight express and next-flight-out scheduling</li>
@@ -186,7 +221,7 @@
 
         <div class="fleet-grid">
           <article class="fleet-card">
-            <div class="fleet-img" style="background-image:url('https://images.unsplash.com/photo-1583412295430-96e2c2bcf424?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="fleet-img" style="background-image:url('https://commons.wikimedia.org/wiki/Special:Redirect/file/Boeing_777_in_then-Boeing_livery_K58552.jpg');"></div>
             <div class="fleet-body">
               <span class="tag">Passenger · Widebody</span>
               <h4>Boeing 777</h4>
@@ -195,16 +230,16 @@
           </article>
 
           <article class="fleet-card">
-            <div class="fleet-img" style="background-image:url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="fleet-img" style="background-image:url('https://commons.wikimedia.org/wiki/Special:Redirect/file/Airbus_A320_(12180643115).jpg');"></div>
             <div class="fleet-body">
               <span class="tag">Passenger · Narrowbody</span>
               <h4>Airbus A320</h4>
-              <p>Short and medium-haul backbone of the regional network.</p>
+              <p>Short- and medium-haul backbone of the regional network.</p>
             </div>
           </article>
 
           <article class="fleet-card">
-            <div class="fleet-img" style="background-image:url('https://images.unsplash.com/photo-1521727857535-28d2047f31c5?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="fleet-img" style="background-image:url('https://commons.wikimedia.org/wiki/Special:Redirect/file/Airbus_A380.jpg');"></div>
             <div class="fleet-body">
               <span class="tag">Passenger · Superjumbo</span>
               <h4>Airbus A380</h4>

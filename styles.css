@@ -74,10 +74,7 @@ h3 {
   cursor: pointer;
   font-size: 14px;
   font-weight: 700;
-  transition:
-    transform 0.2s ease,
-    background 0.2s ease,
-    box-shadow 0.2s ease;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn-primary {
@@ -210,7 +207,7 @@ nav a.active {
   font-size: 26px;
 }
 
-/* Hero */
+/* Homepage hero */
 
 .hero {
   padding: 64px 0 72px;
@@ -297,11 +294,7 @@ nav a.active {
 
 .plan-fields-polished {
   display: grid;
-  grid-template-columns:
-    minmax(0, 1.28fr)
-    minmax(0, 0.95fr)
-    minmax(0, 1.15fr)
-    minmax(160px, auto);
+  grid-template-columns: minmax(0, 1.28fr) minmax(0, 0.95fr) minmax(0, 1.15fr) minmax(160px, auto);
   gap: 14px;
   align-items: stretch;
   padding: 22px 24px 24px;
@@ -424,9 +417,7 @@ nav a.active {
   border: 1px solid #dfe3e8;
   border-radius: 50%;
   font-size: 17px;
-  transition:
-    border-color 0.2s ease,
-    background 0.2s ease;
+  transition: border-color 0.2s ease, background 0.2s ease;
 }
 
 .quicklink:hover .icon-circle {
@@ -519,10 +510,52 @@ nav a.active {
   border-radius: 50%;
 }
 
-/* Sections */
+/* Shared page layouts - restored for Network, Fleet, Alliance and Newsroom */
 
 section:not(.hero) {
   padding: 82px 0;
+}
+
+.page-hero {
+  padding: 64px 0 42px;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+}
+
+.page-hero h1 {
+  font-size: clamp(38px, 5vw, 48px);
+}
+
+.page-hero p {
+  max-width: 720px;
+  margin-top: 14px;
+  color: var(--grey);
+}
+
+.breadcrumb {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--orange);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.section-head {
+  max-width: 700px;
+  margin-bottom: 46px;
+}
+
+.section-head h2 {
+  font-size: clamp(30px, 4vw, 38px);
+  line-height: 1.15;
+}
+
+.section-head p {
+  margin-top: 14px;
+  color: var(--grey);
+  font-size: 16px;
 }
 
 .bg-light {
@@ -550,6 +583,174 @@ section:not(.hero) {
   grid-template-columns: 1.05fr 0.95fr;
   gap: 58px;
   align-items: center;
+}
+
+/* Removed divisions page classes are intentionally not used. */
+.operations-grid,
+.fleet-grid,
+.news-grid,
+.requirements-grid {
+  display: grid;
+  gap: 24px;
+}
+
+.operations-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.fleet-grid,
+.news-grid,
+.requirements-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.operation-card,
+.fleet-card,
+.news-card,
+.requirement-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.operation-card {
+  padding: 38px;
+}
+
+.operation-tag {
+  display: inline-flex;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.tag-pax {
+  color: var(--navy);
+  background: rgba(14, 31, 56, 0.08);
+}
+
+.tag-cargo {
+  color: var(--orange);
+  background: rgba(232, 99, 28, 0.11);
+}
+
+.operation-card h3 {
+  margin: 18px 0 10px;
+  font-size: 24px;
+}
+
+.operation-card p {
+  color: var(--grey);
+}
+
+.operation-list {
+  display: grid;
+  gap: 8px;
+  margin: 20px 0;
+  list-style: none;
+}
+
+.operation-list li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 14px;
+}
+
+.operation-list li::before {
+  position: absolute;
+  left: 0;
+  color: var(--orange);
+  content: "—";
+}
+
+.requirement-card {
+  padding: 30px;
+  text-align: center;
+}
+
+.requirement-card strong {
+  display: block;
+  margin-bottom: 9px;
+  color: var(--orange);
+  font-size: 28px;
+}
+
+.requirement-card span {
+  display: block;
+  color: var(--grey);
+  font-size: 14px;
+}
+
+.fleet-card,
+.news-card {
+  overflow: hidden;
+}
+
+.fleet-img,
+.news-img {
+  height: 180px;
+  background-position: center;
+  background-size: cover;
+}
+
+.fleet-img-real {
+  display: block;
+  width: 100%;
+  height: 205px;
+  object-fit: cover;
+  object-position: center;
+  background: #e9edf2;
+  transition: transform 0.35s ease;
+}
+
+.fleet-card:hover .fleet-img-real {
+  transform: scale(1.02);
+}
+
+.fleet-body,
+.news-body {
+  padding: 22px;
+}
+
+.fleet-body .tag,
+.news-date {
+  color: var(--orange);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+}
+
+.news-date {
+  display: block;
+  margin-bottom: 9px;
+}
+
+.fleet-body h4,
+.news-body h4 {
+  margin-top: 6px;
+  font-size: 18px;
+}
+
+.fleet-body p,
+.news-body p {
+  margin-top: 7px;
+  color: var(--grey);
+  font-size: 14px;
+}
+
+.fleet-link {
+  color: var(--orange);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.center-action {
+  margin-top: 38px;
+  text-align: center;
 }
 
 .hero-buttons {
@@ -651,7 +852,7 @@ footer {
   font-size: 12px;
 }
 
-/* VATSIM LIVE RADAR */
+/* Premium VATSIM radar — scoped to the homepage map only */
 
 .vatsim-home-section {
   overflow: hidden;
@@ -773,8 +974,6 @@ footer {
   display: none;
 }
 
-/* Leaflet */
-
 .vatsim-map .leaflet-control-zoom {
   border: 0;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.3);
@@ -791,8 +990,6 @@ footer {
   color: rgba(255, 255, 255, 0.55) !important;
   background: rgba(10, 14, 19, 0.65) !important;
 }
-
-/* Aircraft */
 
 .radar-aircraft {
   display: flex;
@@ -820,9 +1017,8 @@ footer {
   filter: drop-shadow(0 0 7px rgba(255, 157, 46, 0.8));
 }
 
-/* Flight popup */
-
-.leaflet-popup-content-wrapper {
+/* Scope Leaflet popup styling to the VATSIM card so other pages remain unaffected. */
+.vatsim-radar-card .leaflet-popup-content-wrapper {
   color: #fff;
   background: rgba(12, 16, 22, 0.97);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -830,11 +1026,11 @@ footer {
   box-shadow: 0 15px 45px rgba(0, 0, 0, 0.45);
 }
 
-.leaflet-popup-tip {
+.vatsim-radar-card .leaflet-popup-tip {
   background: #0c1016;
 }
 
-.leaflet-popup-content {
+.vatsim-radar-card .leaflet-popup-content {
   margin: 14px;
 }
 
@@ -901,8 +1097,6 @@ footer {
   font-weight: 600;
 }
 
-/* Responsive */
-
 @media (max-width: 1000px) {
   nav,
   .nav-cta {
@@ -933,6 +1127,11 @@ footer {
 
   .plan-action {
     min-height: 58px;
+  }
+
+  .fleet-grid,
+  .news-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .vatsim-radar-card {
@@ -991,6 +1190,10 @@ footer {
   }
 
   .plan-fields-polished,
+  .operations-grid,
+  .fleet-grid,
+  .news-grid,
+  .requirements-grid,
   .network,
   .promo-row,
   .footer-grid {
@@ -1027,6 +1230,10 @@ footer {
 
   section:not(.hero) {
     padding: 62px 0;
+  }
+
+  .operation-card {
+    padding: 28px;
   }
 
   .vatsim-radar-card {

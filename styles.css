@@ -204,7 +204,7 @@ nav a.active {
   font-size: 26px;
 }
 
-/* Qantas-inspired homepage */
+/* Homepage hero: right-hand logo has no panel, border, background, or shadow. */
 .hero {
   padding: 64px 0 72px;
   background: #fff;
@@ -212,13 +212,14 @@ nav a.active {
 
 .hero-content-with-logo {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(220px, 310px);
-  gap: 52px;
+  grid-template-columns: minmax(0, 1fr) minmax(390px, 540px);
+  gap: 58px;
   align-items: center;
+  min-height: 350px;
 }
 
 .hero-copy {
-  max-width: 680px;
+  max-width: 660px;
 }
 
 .hero h1 {
@@ -233,23 +234,23 @@ nav a.active {
   font-size: 17px;
 }
 
-/* Large logo positioned beside “Plan your flight” */
-.hero-logo-panel {
+/* This puts logo.png exactly in the large empty area at the right of the heading. */
+.hero-logo-space {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 220px;
-  padding: 24px;
-  background: linear-gradient(145deg, #ffffff 0%, #f5f7fa 100%);
-  border: 1px solid #e0e5eb;
-  border-radius: 18px;
-  box-shadow: 0 15px 34px rgba(14, 31, 56, 0.08);
+  min-height: 330px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
 }
 
-.hero-logo-panel img {
-  width: min(100%, 245px);
+.hero-logo-space img {
+  display: block;
+  width: min(100%, 500px);
   height: auto;
-  max-height: 175px;
+  max-height: 330px;
   object-fit: contain;
   mix-blend-mode: multiply;
 }
@@ -886,8 +887,17 @@ footer {
   }
 
   .hero-content-with-logo {
-    grid-template-columns: minmax(0, 1fr) 220px;
+    grid-template-columns: minmax(0, 1fr) 300px;
     gap: 28px;
+    min-height: 270px;
+  }
+
+  .hero-logo-space {
+    min-height: 250px;
+  }
+
+  .hero-logo-space img {
+    max-height: 250px;
   }
 
   .plan-fields-polished {
@@ -926,15 +936,18 @@ footer {
   .hero-content-with-logo {
     grid-template-columns: 1fr;
     gap: 24px;
+    min-height: auto;
   }
 
-  .hero-logo-panel {
-    min-height: 150px;
-    max-width: 270px;
+  .hero-logo-space {
+    justify-content: flex-start;
+    min-height: 210px;
+    max-width: 420px;
   }
 
-  .hero-logo-panel img {
-    max-height: 120px;
+  .hero-logo-space img {
+    width: min(100%, 380px);
+    max-height: 230px;
   }
 
   .plan-tabs {
